@@ -69,14 +69,14 @@ font:
 
   offset:
     x: 0
-    y: 0
+    y: 1
   glyph_offset:
     x: 0
     y: 0
 window:
   padding:
-    x: 10
-    y: 10
+    x: 3
+    y: 3
   # scrolling:
   #   # Maximum number of lines in the scrollback buffer.
   #   # Specifying '0' will disable scrolling.
