@@ -47,7 +47,6 @@ zsh_add_plugin "hlissner/zsh-autopair"
 
 # Key-bindings
 bindkey -s '^o' 'ranger^M'
-bindkey -s '^z' 'zi^M'
 bindkey '^[[P' delete-char
 bindkey "^p" up-line-or-beginning-search # Up
 bindkey "^n" down-line-or-beginning-search # Down
