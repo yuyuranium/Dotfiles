@@ -1,4 +1,4 @@
-source ~/.local/share/zap/zap.zsh
+[ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 
 # Plugins
 typeset -A __Prompt
