@@ -1,2 +1,13 @@
-export ZDOTDIR=$HOME/.config/zsh
-source "$HOME/.config/zsh/.zshrc"
+source ~/.local/share/zap/zap.zsh
+
+# Plugins
+typeset -A __Prompt
+plug "yuyuranium/macOS-singularisart-prompt"
+plug "hlissner/zsh-autopair"
+plug "zsh-users/zsh-history-substring-search"
+plug "zap-zsh/completions"
+
+# Sources
+plug "$HOME/.config/zsh/exports.zsh"
+plug "$HOME/.config/zsh/aliases.zsh"
+plug "$HOME/.config/zsh/plugins.zsh"

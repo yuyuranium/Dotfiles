@@ -7,7 +7,6 @@ alias fgrep='fgrep --color=auto'
 # confirm before overwriting something
 alias cp="cp -i"
 alias mv='mv -i'
-alias rm='rm -i'
 
 # easier to read disk
 alias df='df -h'     # human-readable sizes
@@ -16,20 +15,20 @@ alias free='free -m' # show sizes in MB
 case "$(uname -s)" in
 
 Darwin)
-	# echo 'Mac OS X'
-	alias ls='ls -G'
-	;;
+    # echo 'Mac OS X'
+    alias ls='ls -G'
+    ;;
 
 Linux)
-	alias ls='ls --color=auto'
-        alias ll='ls -l'
-        alias l='ls -la'
-	;;
+    alias ls='ls --color=auto'
+    alias ll='ls -l'
+    alias l='ls -la'
+    ;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)
-	# echo 'MS Windows'
-	;;
+    # echo 'MS Windows'
+    ;;
 *)
-	# echo 'Other OS'
-	;;
+    # echo 'Other OS'
+    ;;
 esac
