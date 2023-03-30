@@ -10,4 +10,5 @@ done &
 
 xrdb ~/.Xresources
 nitrogen --restore
+picom &
 exec dwm
