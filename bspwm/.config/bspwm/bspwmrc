@@ -1,9 +1,13 @@
 #! /bin/sh
 
-pgrep -x sxhkd > /dev/null || sxhkd &
+[ -f $HOME/.xprofile ] && . $HOME/.xprofile
+[ -f $HOME/.config/screenlayout/dual.sh ] && . $HOME/.config/screenlayout/dual.sh
 
-xfce4-panel -d &
-xfdesktop -D &
+xrdb $HOME/.Xresources
+
+export PATH=$PATH:$HOME/.local/bin
+
+pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor DP-1 -d I II
 bspc monitor HDMI-2 -d III IV V VI
