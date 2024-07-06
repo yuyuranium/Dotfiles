@@ -6,6 +6,10 @@
 super + Return
 	kitty
 
+# file explorer
+super + e
+	thunar
+
 # program launcher
 super + @space
 	~/.config/rofi/scripts/launcher_t2

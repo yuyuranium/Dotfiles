@@ -4,17 +4,21 @@
 [ -f $HOME/.config/screenlayout/dual.sh ] && . $HOME/.config/screenlayout/dual.sh
 
 xrdb $HOME/.Xresources
+xsetroot -cursor_name left_ptr &
 
 export PATH=$PATH:$HOME/.local/bin
 
+bash $HOME/.config/polybar/launch.sh --grayblocks &
+dwall -s home
+
 pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x picom > /dev/null || picom &
 
 bspc monitor DP-1 -d I II
 bspc monitor HDMI-2 -d III IV V VI
 
 bspc config border_width         2
 bspc config window_gap          12
-bspc config -m HDMI-2 top_padding 26
 
 bspc config split_ratio          0.5
 bspc config borderless_monocle   true
@@ -25,7 +29,6 @@ bspc config pointer_action1 move
 bspc config pointer_action2 resize_corner
 bspc config pointer_follows_monitor false
 bspc config focus_follows_pointer true
-# bspc config pointer_follows_focus false
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
