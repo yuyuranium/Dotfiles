@@ -11,3 +11,6 @@ plug "zap-zsh/completions"
 plug "$HOME/.config/zsh/exports.zsh"
 plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/plugins.zsh"
+# >>> xmake >>>
+test -f "/home/yuyu/.xmake/profile" && source "/home/yuyu/.xmake/profile"
+# <<< xmake <<<

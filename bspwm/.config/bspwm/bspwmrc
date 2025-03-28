@@ -9,13 +9,13 @@ xsetroot -cursor_name left_ptr &
 export PATH=$PATH:$HOME/.local/bin
 
 bash $HOME/.config/polybar/launch.sh --grayblocks &
-dwall -s home
+dwall -s market
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x picom > /dev/null || picom &
 
-bspc monitor DP-1 -d I II
-bspc monitor HDMI-2 -d III IV V VI
+bspc monitor DP-1 -d I II III
+bspc monitor HDMI-2 -d IV V VI VII
 
 bspc config border_width         2
 bspc config window_gap          12

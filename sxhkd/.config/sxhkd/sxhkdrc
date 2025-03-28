@@ -136,4 +136,4 @@ super + {Left,Down,Up,Right}
 
 # screenshot in a region
 super + ctrl + {_,shift + }4
-	xfce4-screenshooter {-r,-rc}
+	(pgrep -x xfce4-clipman > /dev/null || xfce4-clipman &) && xfce4-screenshooter {-r,-rc}
